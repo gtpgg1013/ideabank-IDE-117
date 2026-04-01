@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      PORT: ${PORT:-3201}
+      ACCESS_PASSWORD: ${ACCESS_PASSWORD:-ideabank2026}
+    ports:
+      - "${PORT:-3201}:${PORT:-3201}"
